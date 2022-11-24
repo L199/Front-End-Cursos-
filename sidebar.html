@@ -39,6 +39,11 @@
             <li><a href="#"><i class="fa fa-envelope-o"></i>Contact</a></li>
         </ul>
     </div>
+    <script>
+        $(".sub-menu a").click((event) => {
+            $(event.target).parent().find("ul").slideToggle();
+        });
+    </script>
 </body>
 
 </html>
