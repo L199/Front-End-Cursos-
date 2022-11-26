@@ -11,7 +11,55 @@
     <style>
         .photo-gallery {
             width: 95%;
-            border: 10px
+            border: 1px solid #757575;
+            padding: 10px;
+            margin: auto;
+            margin-top: 30px;
+            height: 250px;
+        }
+        
+        .photo {
+            float: left;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.5s;
+            width: 250px;
+            height: 180px;
+            background-size: cover;
+        }
+        
+        #photo1 {
+            background-image: url("images/cathedral.jpg");
+        }
+        
+        #photo2 {
+            background-image: url("images/kanchipuram.jpg");
+        }
+        
+        #photo3 {
+            background-image: url("images/mamallapuram.jpg");
+        }
+        
+        .img-caption {
+            text-align: center;
+            margin-top: 120px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        
+        .photo:hover {
+            transform: scale(1.1);
+        }
+        
+        .photo img {
+            border: 3px ridge #7c7b7b;
+            box-shadow: 0px 0px 2px 2px #7c7b7b;
+        }
+        
+        .center {
+            text-align: center;
+            float: left;
+            background-clip: border-box;
         }
     </style>
 </head>
@@ -22,18 +70,61 @@
         <div class="navbar-brand">India Tourism</div>
         <div class="nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="destinations.html">Destinations</a></li>
                 <li><a href="states.html">States</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="gallery.html">Galeria</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="capitals.html">Capital</a></li>
             </ul>
         </div>
     </div>
+    <!-- navbar ends here -->
+
     <div class="photo-gallery">
-        <div class="photo"><img src="/images/cathedral.jpg" width="250px" height="180px"></div>
-        <div class="photo"><img src="/images/kanchipuram.jpg" width="250px" height="180px"></div>
-        <div class="photo"><img src="/images/mamallapuram.jpg" width="250px" height="180px"></div>
+        <div class="photo" id="photo1">
+            <div class="img-caption">Cathedral Church</div>
+        </div>
+
+        <a href="https://www.google.com/">
+            <div class="photo" id="photo2">
+                <div class="img-caption">Kanchipuram</div>
+            </div>
+        </a>
+        <div class="photo" id="photo3">
+            <div class="img-caption">Mamallapuram</div>
+        </div>
+    </div>
+
+
+    <div class="center">
+        <picture>
+            <source srcset="images/sparrow.jpg" media="(min-width: 1000px)">
+            <source srcset="images/sparrow-small.jpg" media="(min-width: 200px)">
+            <img src="" width="500px" height="300px" alt="Sparrow" />
+        </picture>
+    </div>
+    <div class="center">
+        <audio controls="controls" autoplay="autoplay">
+            <source src="images/rain.mp3">
+            <source stc="images/rain.ogg">
+        </audio>
+    </div>
+    <div class="center">
+
+        <video controls="controls" width="700px">
+            <source src="images/trailer.mp4" type="video/mp4">
+            <source src="images/trailer.webm" type="video/webm">
+            <source src="images/trailer.ogg" type="video/ogg">
+        </video>
+    </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=nV9nB97VheI" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="center">
+        <img src="images/workplace.jpg" width="500px" usemap="#workmap">
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" href="http://www.google.com/search?q=computer">
+        </map>
     </div>
 </body>
 
