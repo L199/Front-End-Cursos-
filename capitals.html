@@ -8,6 +8,116 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Capital</title>
+    <style>
+        body {
+            background-image: url(/images/banner.jpg);
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .table {
+            width: 100%;
+            cursor: pointer;
+            box-shadow: 1px 1px 2px 2px #d4d0d0;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            border-collapse: collapse;
+            min-width: 1000px;
+            caption-side: top;
+        }
+        
+        .table-container {
+            width: 95%;
+            margin: auto;
+            overflow: auto;
+            margin-bottom: 100px;
+            max-height: 700px;
+        }
+        
+        .capitao {
+            background-color: #0e5b8f;
+            color: #ffffff;
+            padding: 12px 10px;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        
+        .table td,
+        th {
+            border: 1px solid #a39d9d;
+            text-align: center;
+        }
+        
+        .table td {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: 1px solid #a39d9d;
+            padding: 8px;
+        }
+        
+        .table th {
+            border: 1px solid #a19c9c;
+            color: rgb(25, 0, 255);
+            background-color: #aeaeb1;
+            padding: 12px 10px;
+        }
+        
+        .table tr {
+            transition: background-color 0.3s;
+        }
+        
+        .table tr:hover {
+            background-color: #b6aaaa;
+        }
+        
+        .table tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+        
+        .table tr:nth-child(odd) {
+            background-color: #cecccc;
+        }
+        
+        .vertical {
+            vertical-align: top;
+        }
+        
+        .pagina {
+            background-color: #e2e0e0;
+            width: 400px;
+            margin: auto;
+            margin-bottom: 100px;
+            font-size: 20px;
+        }
+        
+        .pagina ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .pagina ul li {
+            width: 50px;
+            text-align: center;
+            background-color: #92d892;
+            float: left;
+        }
+        
+        .pagina ul li a:link {
+            text-decoration: none;
+            color: #ffffff;
+            width: 50px;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            transition: background-color 0.3s;
+        }
+        
+        .pagina ul li a:hover {
+            background-color: #7aa7ad;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -15,7 +125,7 @@
         <div class="navbar-brand">India Tourism</div>
         <div class="nav">
             <ul>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="destinations.html">Destinations</a></li>
                 <li><a href="states.html">States</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -23,6 +133,63 @@
             </ul>
         </div>
     </div>
+    <div class="table-container">
+        <table class="table">
+            <caption class="capitao">Tabela do Brasil</caption>
+            <thead>
+                <tr>
+                    <th> Estado </th>
+                    <th> Capital </th>
+                    <th> Cidade</th>
+                    <th> País</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Minas Gerais</td>
+                    <td> Belo Horizonte </td>
+                    <td> Guaxupé</td>
+                    <td> Brasil</td>
+                </tr>
+                <tr>
+                    <td> Rio de Janeiro</td>
+                    <td> Rio de Janeiro </td>
+                    <td> Paraty</td>
+                    <td> Brasil</td>
+                </tr>
+                <tr>
+                    <td> Paraná</td>
+                    <td> Curitiba </td>
+                    <td> Maringa</td>
+                    <td rowspan="2" class="vertical"> Brasil</td>
+                </tr>
+                <tr>
+                    <td> Bahia</td>
+                    <td> Salvador </td>
+                    <td> porto seguros</td>
+
+                </tr>
+                <tr>
+                    <td colspan="3">Total: </td>
+                    <td>24 estados</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="pagina">
+        <ul>
+            <li><a href="#"> &laquo;</a></li>
+            <li> <a href="#">1</a></li>
+            <li> <a href="#">2</a> </li>
+            <li> <a href="#">3</a> </li>
+            <li> <a href="#">4</a> </li>
+            <li> <a href="#">5</a> </li>
+            <li> <a href="#">6</a> </li>
+            <li><a href="#"> &raquo;</a></li>
+        </ul>
+    </div>
+
 </body>
 
 </html>
