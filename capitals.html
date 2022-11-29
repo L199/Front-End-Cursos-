@@ -116,6 +116,14 @@
         .pagina ul li a:hover {
             background-color: #7aa7ad;
         }
+        
+        .Form-control {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #5e9adf;
+            transition: box-shadow 0.3s;
+        }
     </style>
 
 </head>
@@ -135,7 +143,9 @@
     </div>
     <div class="table-container">
         <table class="table">
-            <caption class="capitao">Tabela do Brasil</caption>
+            <caption class="capitao">Tabela do Brasil
+                <div style="width: 300px;"><input type="search" class="Form-control" value="SEARCH"></div>
+            </caption>
             <thead>
                 <tr>
                     <th> Estado </th>

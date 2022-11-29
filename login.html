@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Cards</title>
+    <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .card {
+            width: 300px;
+            box-shadow: 2px 2px 3px 3px #c7bbbb;
+            margin: 20px;
+        }
+        
+        .float-left {
+            float: left;
+        }
+        
+        .card-header {
+            background-color: #9b9696;
+            padding: 10px 18px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        
+        .card-body {
+            padding: 18px;
+        }
+        
+        .card-footer {
+            padding: 10px;
+            text-align: right;
+            background-color: #d1cdcd;
+        }
+        
+        .card-container {
+            height: 350px;
+        }
+        
+        .list-group {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .list-group li {
+            padding: 8px 5px;
+            border-bottom: 1px solid #cecece;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .list-group li:hover {
+            background-color: #e7e5e5;
+        }
+        
+        .card-body h4 {
+            margin: 0px;
+            padding: 0px;
+        }
+        /*Forms*/
+        
+        .signup-card {
+            width: 700px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 100px;
+        }
+        
+        .Form-element {
+            height: 35px;
+            margin-bottom: 20px;
+        }
+        
+        .Form-label {
+            width: 30%;
+            float: left;
+        }
+        
+        .Form-control-container {
+            width: 70%;
+            float: left;
+        }
+        
+        .Form-control {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #5e9adf;
+            transition: box-shadow 0.3s;
+        }
+        
+        .Form-control:focus {
+            box-shadow: 0px 0px 3px 2px #2b77be;
+            outline: none;
+        }
+        
+        .btn {
+            background-color: #3c84be;
+            color: #ffffff;
+            padding: 10px 15px;
+            font-size: 18px;
+            border-radius: 3px;
+            cursor: pointer;
+            box-shadow: 0px 0px 2px 1px #bdbbbb;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            border: 1px solid #ebe8e8;
+            margin: 2px 6px;
+        }
+        
+        .btn:hover {
+            background-color: #1869ac;
+            box-shadow: 0px 0px 3px 3px #9e9b9b;
+        }
+        
+        .card-Footer {
+            padding: 10px;
+            text-align: right;
+            background-color: #d1cdcd;
+        }
+        
+        .reset-button {
+            background-color: #ee3c3c;
+            background-image: url("images/11089337.png") 20px;
+        }
+        
+        .reset-button:hover {
+            background-color: #c72727;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div class="navbar-brand">India Tourism</div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="states.html">States</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="gallery.html">Galeria</a></li>
+                <li><a href="capitals.html">Capital</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="login.html">login</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <form>
+        <div class="card signup-card">
+            <div class="card-header">Sign Up</div>
+            <!-- card body starts -->
+            <div class="card-body">
+
+                <div class="Form-element">
+                    <div class="Form-label"><label for="email">Email</label></div>
+                    <div class="Form-control-container">
+                        <input type="email" class="Form-control" id="email" name="email" autocomplete="off" autofocus="autofocus" placeholder="seu email bosta" required="required" />
+                    </div>
+                </div>
+
+                <div class="Form-element">
+                    <div class="Form-label"><label for="password">Password</label></div>
+                    <div class="Form-control-container">
+                        <input type="password" class="Form-control" id="password" name="password">
+                    </div>
+                </div>
+
+                <div class="Form-element">
+                    <div class="Form-label"><label for="cidade">Cidade</label></div>
+                    <div class="Form-control-container">
+                        <input type="text" class="Form-control" id="cidade" name="cidade" value="cuzao" readonly="readonly" disabled="disabled">
+                    </div>
+                </div>
+
+                <div class="Form-element">
+                    <div class="Form-label"><label for="color">Cor</label></div>
+                    <div class="Form-control-container">
+                        <input type="color" class="Form-control" id="color" name="color">
+                    </div>
+                </div>
+                <div class="Form-element">
+                    <div class="Form-label"><label for="data">Data</label></div>
+                    <div class="Form-control-container">
+                        <input type="date" class="Form-control" id="data" name="data">
+                    </div>
+                </div>
+                <div class="Form-element">
+                    <div class="Form-label"><label for="datalocal">Data Local</label></div>
+                    <div class="Form-control-container">
+                        <input type="datetime-local" class="Form-control" id="datalocal" name="datalocal">
+                    </div>
+                </div>
+                <div class="Form-element">
+                    <div class="Form-label"><label for="tempo">Tempo</label></div>
+                    <div class="Form-control-container">
+                        <input type="time" class="Form-control" id="tempo" name="tempo">
+                    </div>
+                </div>
+                <div class="Form-element">
+                    <div class="Form-label"><label for="mes">Mês</label></div>
+                    <div class="Form-control-container">
+                        <input type="month" class="Form-control" id="mes" name="mes">
+                    </div>
+                </div>
+                <div class="Form-element">
+                    <div class="Form-label"><label for="semana">Semana</label></div>
+                    <div class="Form-control-container">
+                        <input type="week" class="Form-control" id="semana" name="semana">
+                    </div>
+                </div>
+                <div class="Form-element">
+                    <div class="Form-label"><label for="file">file</label></div>
+                    <div class="Form-control-container">
+                        <input type="file" class="Form-control" id="file" name="file">
+                    </div>
+                </div>
+
+                <div class="Form-element">
+                    <div class="Form-label"><label for="url">URL</label></div>
+                    <div class="Form-control-container">
+                        <input type="url" class="Form-control" id="url" name="url">
+                    </div>
+                </div>
+
+                <div class="Form-element">
+                    <div class="Form-label"><label for="numero">Numero</label></div>
+                    <div class="Form-control-container">
+                        <input type="number" class="Form-control" id="numero" name="numero" min="1" max="25" step="20">
+                    </div>
+                </div>
+
+
+                <div class="Form-element">
+                    <div class="Form-label"><label for="rating">Website</label></div>
+                    <div class="Form-control-container">
+                        <input type="range" min="1" max="5" class="Form-control" id="rating" name="rating">
+                    </div>
+                </div>
+
+
+                <div class="Form-element">
+                    <div class="Form-label"><label for="search">Search</label></div>
+                    <div class="Form-control-container">
+                        <input type="search" min="1" max="5" class="Form-control" id="search" name="search">
+                    </div>
+                </div>
+
+                <div class="Form-element">
+                    <div class="Form-label"><label for="sexo">sexo</label></div>
+                    <div class="Form-control-container" id="sexo" checked="checked">
+
+                        <input type="radio" id="mulher" name="gender">
+                        <label for="mulher">mulher</label>
+
+                        <input type="radio" id="homem" name="gender">
+                        <label for="homem">homem</label>
+
+                        <input type="radio" id="others" name="gender">
+                        <label for="other">others</label>
+                    </div>
+                </div>
+
+
+                <div class="Form-element">
+                    <div class="Form-label">
+                        &nbsp;
+                    </div>
+                    <div class="Form-control-container">
+                        <input type="checkbox" id="receita" name="receita">
+                        <label for="receita"> Receita </label>
+                    </div>
+                </div>
+
+                <div class="card-Footer">
+                    <input type="hidden" name="usertype" value="customer">
+                    <button type="submit" class="btn">
+                        
+                       <img src="/images/ok.png" width="20px"> Submit</button>
+                    <input type="reset" class="btn reset-button" value="Clear">
+                    <div>
+                        <input type="image" src="/images/ok.png" width="20px" height="20px">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- card body ends -->
+
+
+
+    </form>
+</body>
+
+</html>
