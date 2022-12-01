@@ -7,11 +7,18 @@ body {
 
 * {
     box-sizing: border-box;
+    margin: var(--default-space);
+}
+
+:root {
+    --header-color: #0a4696;
+    --default-space: 0px;
 }
 
 #navbar {
-    background-color: #35b135;
+    background-color: var(--header-color);
     height: 60px;
+    color: #ffffff;
     position: sticky;
     left: 0px;
     /* mais espaço ->*/
@@ -61,7 +68,6 @@ body {
 
 #navbar .nav ul li a:link,
 #navbar .nav ul li a:visited {
-    color: #ffffff;
     text-decoration: none;
     padding-left: 20px;
     padding-right: 20px;
@@ -70,8 +76,20 @@ body {
     border-radius: 6px;
 }
 
+#navbar .nav ul li a:link {
+    color: #ffffff;
+}
+
+#navbar .nav ul li a:visited {
+    color: #ff0000;
+}
+
 #navbar .nav ul li a:hover {
     background-color: #059205;
+}
+
+#navbar .nav ul li:active {
+    transform: scale(0.9);
 }
 
 .box {

@@ -48,9 +48,14 @@
             border: 1px solid #a39d9d;
             text-align: center;
         }
-        
+        /*
         .table td {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: 1px solid #a39d9d;
+            padding: 8px;
+        }*/
+        
+        .table td {
             border: 1px solid #a39d9d;
             padding: 8px;
         }
@@ -69,13 +74,24 @@
         .table tr:hover {
             background-color: #b6aaaa;
         }
-        
-        .table tr:nth-child(even) {
+        /* .table tr:nth-child(even) {
             background-color: #ffffff;
         }
         
         .table tr:nth-child(odd) {
             background-color: #cecccc;
+        }*/
+        
+        .table td:empty {
+            background-color: #1070a7;
+        }
+        /*
+        .table tbody tr:nth-child(1) td:nth-child(2) {
+            background-color: #1ec564;
+        }*/
+        
+        .table tbody tr:not(:nth-child()) {
+            background-color: #1ec564;
         }
         
         .vertical {
@@ -182,6 +198,17 @@
                 <tr>
                     <td colspan="3">Total: </td>
                     <td>24 estados</td>
+                    <tr>
+                        <!--empty-->
+                        <td></td>
+                        <!--empty-->
+                        <td></td>
+                        <!--empty-->
+                        <td></td>
+                        <!--empty-->
+                        <td></td>
+                        <!--empty-->
+                    </tr>
                 </tr>
             </tbody>
         </table>

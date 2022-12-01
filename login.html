@@ -131,6 +131,54 @@
         .reset-button:hover {
             background-color: #c72727;
         }
+        
+        .center {
+            text-align: center;
+        }
+        
+        input:checked {
+            box-shadow: 0px 0px 4px 2px #0e32a8;
+            background-color: #0e32a8;
+        }
+        
+        option:checked {
+            box-shadow: 0px 0px 4px 2px #0e32a8;
+            background-color: #0e32a8;
+        }
+        
+        optgroup:checked {
+            box-shadow: 0px 0px 4px 2px #0e32a8;
+            background-color: #0e32a8;
+        }
+        /*
+        input:valid {
+            border: 2px solid #01a33f;
+        }
+        
+        input:invalid {
+            border: 2px solid #e23003;
+        }*/
+        /* input:enabled {
+            background-color: #c5f56b;
+        }*/
+        /*input:disabled {
+            background-color: #4a4b49;
+        }*/
+        /*input:read-write {
+            background-color: #c5f56b;
+        }*/
+        /*input:read-only {
+            background-color: #4a4b49;
+            color: #ffffff;
+        }*/
+        
+        input:in-range {
+            border: 2px solid #01a33f;
+        }
+        
+        input:out-of-range {
+            border: 2px solid #ee3c3c;
+        }
     </style>
 </head>
 
@@ -152,7 +200,8 @@
     </div>
 
 
-    <form>
+    <!--<form action="http://postman-echo.com/post" method="post" target="my">-->
+    <form id="F1">
         <div class="card signup-card">
             <div class="card-header">Sign Up</div>
             <!-- card body starts -->
@@ -161,7 +210,15 @@
                 <div class="Form-element">
                     <div class="Form-label"><label for="email">Email</label></div>
                     <div class="Form-control-container">
-                        <input type="email" class="Form-control" id="email" name="email" autocomplete="off" autofocus="autofocus" placeholder="seu email bosta" required="required" />
+                        <input type="email" class="Form-control" id="email" name="email" autocomplete="off" autofocus="autofocus" placeholder="seu email bosta" maxlength="30" required="required" />
+                    </div>
+                </div>
+
+
+                <div class="Form-element">
+                    <div class="Form-label"><label for="nome">Nome</label></div>
+                    <div class="Form-control-container">
+                        <input type="text" class="Form-control" id="nome" name="nome" placeholder="Nome" pattern="^[A-Za-z]*$" title="Caralho">
                     </div>
                 </div>
 
@@ -175,7 +232,15 @@
                 <div class="Form-element">
                     <div class="Form-label"><label for="cidade">Cidade</label></div>
                     <div class="Form-control-container">
-                        <input type="text" class="Form-control" id="cidade" name="cidade" value="cuzao" readonly="readonly" disabled="disabled">
+                        <input type="text" class="Form-control" id="cidade" name="cidade" list="cidades">
+
+                        <datalist id="cidades">
+                            <option value="Sao Paulo"></option>
+                            <option value="Guaxupé"></option>
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Biguatinga"></option>
+                        </datalist>
+
                     </div>
                 </div>
 
@@ -191,30 +256,34 @@
                         <input type="date" class="Form-control" id="data" name="data">
                     </div>
                 </div>
-                <div class="Form-element">
-                    <div class="Form-label"><label for="datalocal">Data Local</label></div>
-                    <div class="Form-control-container">
-                        <input type="datetime-local" class="Form-control" id="datalocal" name="datalocal">
+                <fieldset>
+                    <legend>Seu aniversário bosta</legend>
+                    <div class="Form-element">
+                        <div class="Form-label"><label for="datalocal">Data Local</label></div>
+                        <div class="Form-control-container">
+                            <input type="datetime-local" class="Form-control" id="datalocal" name="datalocal">
+                        </div>
                     </div>
-                </div>
-                <div class="Form-element">
-                    <div class="Form-label"><label for="tempo">Tempo</label></div>
-                    <div class="Form-control-container">
-                        <input type="time" class="Form-control" id="tempo" name="tempo">
+                    <div class="Form-element">
+                        <div class="Form-label"><label for="tempo">Tempo</label></div>
+                        <div class="Form-control-container">
+                            <input type="time" class="Form-control" id="tempo" name="tempo">
+                        </div>
                     </div>
-                </div>
-                <div class="Form-element">
-                    <div class="Form-label"><label for="mes">Mês</label></div>
-                    <div class="Form-control-container">
-                        <input type="month" class="Form-control" id="mes" name="mes">
+                    <div class="Form-element">
+                        <div class="Form-label"><label for="mes">Mês</label></div>
+                        <div class="Form-control-container">
+                            <input type="month" class="Form-control" id="mes" name="mes">
+                        </div>
                     </div>
-                </div>
-                <div class="Form-element">
-                    <div class="Form-label"><label for="semana">Semana</label></div>
-                    <div class="Form-control-container">
-                        <input type="week" class="Form-control" id="semana" name="semana">
+                    <div class="Form-element">
+                        <div class="Form-label"><label for="semana">Semana</label></div>
+                        <div class="Form-control-container">
+                            <input type="week" class="Form-control" id="semana" name="semana">
+                        </div>
                     </div>
-                </div>
+                </fieldset>
+
                 <div class="Form-element">
                     <div class="Form-label"><label for="file">file</label></div>
                     <div class="Form-control-container">
@@ -225,14 +294,22 @@
                 <div class="Form-element">
                     <div class="Form-label"><label for="url">URL</label></div>
                     <div class="Form-control-container">
-                        <input type="url" class="Form-control" id="url" name="url">
+                        <input type="url" class="Form-control" id="url" name="url" placeholder="url seu caralho" readonly="readonly">
                     </div>
                 </div>
 
                 <div class="Form-element">
-                    <div class="Form-label"><label for="numero">Numero</label></div>
+                    <div class="Form-label"><label for="Attachment">Attachment</label></div>
                     <div class="Form-control-container">
-                        <input type="number" class="Form-control" id="numero" name="numero" min="1" max="25" step="20">
+                        <input type="file" class="Form-control" id="Attachment" name="Attachment" multiple="multiple">
+                    </div>
+                </div>
+
+
+                <div class="Form-element">
+                    <div class="Form-label"><label for="numero">numero</label></div>
+                    <div class="Form-control-container">
+                        <input type="number" class="Form-control" id="numero" name="numero" min="1" max="50" step="100">
                     </div>
                 </div>
 
@@ -278,7 +355,46 @@
                     </div>
                 </div>
 
-                <div class="card-Footer">
+                <div class="Form-element">
+                    <div class="Form-label">
+                        <label for="endereco"> Endereco</label>
+                    </div>
+                    <div class="Form-control-container">
+                        <textarea id="endereco" name="endreco" class="Form-control" cols="60" rows="3" placeholder="Endereço"></textarea>
+                    </div>
+                </div>
+
+
+
+                <div class="Form-element" style="height: 200px;">
+                    <div class="Form-label">
+                        <label for="pais"> País</label>
+                    </div>
+                    <div class="Form-control-container">
+                        <select id="pais" name="pais" class="Form-control">
+                            <option value="">Por Favor seu país Caralho</option>
+                            <optgroup label="B">
+                                <option value="Brasil">Brasil</option>
+                            </optgroup>
+                            
+                            <optgroup label="C">
+                                <option value="Colombia">Colombia</option>
+                            </optgroup>
+                            
+                            <optgroup label="E">
+                                <option value="Eua">Eua</option>
+                            </optgroup>
+                            
+                            <optgroup label="J">
+                                <option value="Japão">Japão</option>
+                            </optgroup>
+                            
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- <div class="card-Footer">
                     <input type="hidden" name="usertype" value="customer">
                     <button type="submit" class="btn">
                         
@@ -288,7 +404,26 @@
                         <input type="image" src="/images/ok.png" width="20px" height="20px">
                     </div>
 
+                </div>-->
+
+                <div class="card-Footer">
+                    <input type="hidden" name="usertype" value="customer">
+                    <button class="btn" formaction="http://postman-echo.com/post" formmethod="post" formtarget="my">
+                      Register
+                    </button>
+                    <!--  <input type="submit" value="Input Submit" formaction="http://postman-echo.com/post" 
+                        formmethod="post" formtarget="_blank">-->
+                    <input type="reset" class="btn reset-button" value="Clear" disabled="disabled">
+                    <!-- <div>
+                      <input type="image" src="images/ok.png" width="25px">
+                    </div> -->
+
+                    <div>
+                        * marks are mandatory fields.
+                    </div>
                 </div>
+
+
             </div>
         </div>
         </div>
@@ -297,6 +432,13 @@
 
 
     </form>
+
+    <div class="center">
+        <input type="text" name="Friend" placeholder="seu amigo cu" form="F1">
+    </div>
+
+
+    <iframe name="my" width="100%" height="400px"></iframe>
 </body>
 
 </html>
