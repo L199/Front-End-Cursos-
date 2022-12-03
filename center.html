@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+            font-size: 22px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .container {
+            /* background-color: bisque; */
+            min-height: 100vh;
+            display: grid;
+            /* justify-items: center;
+            align-items: center; */
+            place-items: center center;
+        }
+        
+        .box {
+            background-color: blue;
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 6px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"> Hello! </div>
+    </div>
+</body>
+
+</html>
